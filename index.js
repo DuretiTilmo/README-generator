@@ -16,12 +16,6 @@ const questions = [
             name: "description",
         },
         {
-            type: "list",
-            message: "What do you want the table of content to include",
-            name: "tableofContent",
-            choices: ["Installation", "Usage", "License", "Contributing Guidelines", "Test Instructions", "Questions"]
-        },
-        {
             type: "input",
             message: "What step should be followed to install your project?",
             name: "installation",
@@ -35,7 +29,7 @@ const questions = [
             type: "list",
             message: "What license do you want to use?",
             name: "license",
-            choices: ["MIT License", "Apache License 2.0", "General Public License 3.0", "Eclipse Public License 2.0", "None"]
+            choices: ["MIT License", "Apache License 2.0", "General Public License 3.0", "Eclipse Public License 1.0", "None"]
         },
         {
             type: "input",
@@ -57,13 +51,26 @@ const questions = [
             message: "What is your GitHub URL?",
             name: "link_2"
         }
-      ]
+    ]
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    const readmeContent = generateMarkdown(fileName, data);
+      fs.writeFile('README.md',readmeContent, (err) => 
+      err ? console.log(err) : console.log('Successfully created a README file!')
+      );
+};
+// }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then((data) => {
+        console.log(data);
+    var readmeContent = generateMarkdown(data);
+    writeToFile(readmeContent);
+    })
+}
 
 // Function call to initialize app
 init();
