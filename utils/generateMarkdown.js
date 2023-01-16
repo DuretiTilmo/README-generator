@@ -1,8 +1,5 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-// const fs = require("fs");
-// const inquirer = require("inquirer");
-const index = require("../index.js");
 
 function renderLicenseBadge(license) {
   let licenseBadge = ''
@@ -53,45 +50,51 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 
 function generateMarkdown(data) {
-  // const  data = ({title, description, installation, usage, license, test, contribution, link_1, link_2}) => { 
-    return `# ${data.title}
-    ## Table of Content
-      - [Description](#Description})
-      - [Usage](#Usage)
-      - [Installation](#Installation)
-      - [Contributing Guidelines](#Contribution)
-      - [Test] (#Test)
-      - [License] (#License)
-      - [Questions] (#Links})
+ const {title, description, installation, usage, license, test, contribution, link_1, link_2} = data;
+
+  return `# ${title}
+
+## Table of Content
+- [Description](#description)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Contribution](#contribution)
+- [Test](#test)
+- [License](#license)
+- [Questions](#questions)
+-------------------------------------
+### Description
+
+    ${description}
     
+### Usage
+
+    ${usage}
     
-    ## Overview
+### Installation
+
+    ​${installation} 
     ​
-    ### Description
-    ${data.description}
+### Contribution
+
+    ${contribution}
+   
+### Test 
+
+    ${test}
+   
+### License 
+
+    ${renderLicenseSection(license)}
+
+    ${renderLicenseBadge(license)} ${renderLicenseLink(license)}
     
-    ## Usage
-    ${data.usage}
-    
-    ### Installation
-    ​${data.installation}
-    ​
-    ​### Contributing Guidelines
-    ${data.contribution}
+-----------------------------------------
+### Questions
+
+    - Email Address: ${link_1}
+    - Github Profile: ${link_2}`
    
-    ### Test 
-    ${data.test}
-   
-    ### License 
-    ${renderLicenseSection(data.license)}
-    ${renderLicenseBadge(data.license)}
-    ${renderLicenseLink(data.license)}
-   
-    ### Links
-    ​
-    - Linkedn URL: ${data.link_1}
-    - Github URL: ${data.link_2}`
-   
-   }
-// }
+}
+
 module.exports = generateMarkdown;
