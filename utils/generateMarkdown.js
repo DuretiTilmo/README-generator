@@ -81,8 +81,7 @@ function generateMarkdown(data) {
 ## License 
     
     Licensed under the ${renderLicenseSection(license)} 
-    
-    Refer to: ${renderLicenseLink(license)}
+${renderLicenseLink(license)}
 -----------------------------------------
 
 ## Questions
