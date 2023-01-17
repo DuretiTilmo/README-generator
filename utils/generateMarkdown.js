@@ -80,17 +80,17 @@ function generateMarkdown(data) {
    
 ## License 
     
-    Licensed under the ${renderLicenseSection(license)} 
-${renderLicenseLink(license)}
+### Licensed under the ${renderLicenseSection(license)} 
+#### ${renderLicenseLink(license)}
 -----------------------------------------
 
 ## Questions
 
-  -Contact me:
+-Contact me:
 
-    - Email Address: ${link_1}
-
-    - Github Profile: ${link_2}`
+  - Email Address: ${link_1}
+ 
+  - Github Profile: ${link_2}`
    
 }
 
