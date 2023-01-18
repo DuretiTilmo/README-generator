@@ -1,44 +1,30 @@
 # README Generator
-  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
-## Table of Content
-- [Description](#description)
-- [Usage](#usage)
-- [Installation](#installation)
-- [Contribution](#contribution)
-- [Test](#test)
-- [License](#license)
-- [Questions](#questions)
--------------------------------------
+
 ## Description
 
-    Dynamically generates a README.md file
-    
-## Usage
+A starter code was provided for this challenge to create a command-line application that dynamically generates a professinoal README.md file from a user's input using an environment, like package.json. Answers to prompts are used to determine the templates and contents of the file. A default value for when a user doesn't input anything, object destructuring, template literals and many more node.js extended functionalities are implemented to build this application. 
 
-    Generated from a user's input using inquirer package
-    
-## Installation
+### Screencastify Link: [https://drive.google.com/file/d/1lKaMYXYaV4_0dvcCeXL6aDW5r6E84-uM/view]
+### GitHub URL: [https://github.com/DuretiTilmo/README-generator]
 
-    ​npm install 
-    ​
-## Contribution
+### Screenshots
 
-    Do not contribute
-   
-## Test 
+![Screenshot showing the prompts and resoponses in the terminal after user's input](Screenshot_20230117_012338.png)
 
-    node index.js
-   
-## License 
-    
-### Licensed under the General Public License 3.0 
-#### (https://www.gnu.org/licenses/gpl-3.0)
+--------------------------------
+
+![Screenshot of sample README file generated dynamically based on the user's input](Screenshot%202023-01-17%20011424.png)
+
 -----------------------------------------
+
+## License
+
+MIT License 
 
 ## Questions
 
--Contact me:
-
   - Email Address: duretikadir22@gmail.com
- 
-  - Github Profile: duretitilmo
+
+--------------------------------
+
+&copy; Copyright 2023 
